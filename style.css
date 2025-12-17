@@ -1,0 +1,134 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #e0e0e0;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column; /* Prvky se řadí pod sebe */
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    background: #1e1e1e;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    max-width: 400px;
+}
+
+h1 {
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#new-task-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+#task {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #333;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: #2a2a2a;
+    color: #e0e0e0;
+}
+
+#submit {
+    padding: 10px 15px;
+    background-color: #00bcd4;
+    color: #121212;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#submit:disabled {
+    background-color: #008ba3;
+    cursor: not-allowed;
+    color: #a0a0a0;
+}
+
+#submit:hover:enabled {
+    background-color: #0097a7;
+}
+
+#tasks {
+    list-style: none;
+    padding: 0;
+}
+
+#tasks li {
+    background: #2a2a2a;
+    padding: 10px;
+    margin-bottom: 8px;
+    border-radius: 4px;
+    border-left: 5px solid #00bcd4;
+    word-wrap: break-word;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.task-content {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.task-text {
+    margin-left: 10px;
+    color: #e0e0e0;
+}
+
+.completed {
+    border-left-color: #4caf50 !important; 
+    background: #233323; 
+}
+
+.completed .task-text {
+    text-decoration: line-through;
+    color: #888;
+}
+
+.delete-btn {
+    background: #f44336; 
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 15px;
+    font-weight: bold;
+}
+
+.delete-btn:hover {
+    background: #d32f2f;
+}
+
+/* Stylování patičky NA ČERNÉM POZADÍ */
+.center-footer {
+    text-align: center;
+    margin-top: 30px; /* Větší mezera od obdélníku */
+    width: 100%;
+}
+
+.center-footer img {
+    opacity: 0.6; /* Decentnější vzhled na pozadí */
+    transition: opacity 0.3s;
+    margin: 0 5px;
+}
+
+.center-footer img:hover {
+    opacity: 1;
+}
